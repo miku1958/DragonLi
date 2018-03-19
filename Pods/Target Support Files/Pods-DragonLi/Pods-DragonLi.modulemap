@@ -1,0 +1,6 @@
+framework module Pods_DragonLi {
+  umbrella header "Pods-DragonLi-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,12 @@
+{% for type in types.implementing.AutoCreateEnum %}		//{% %}中的内容作为代码运行,语言风格跟swift是一样的
+extension {{type.name}} {												//{{ }}自动生成的内容
+static func ==(lhs: {{type.name}}, rhs: {{type.name}}) -> Bool {
+
+{% for variable in type.storedVariables %}
+guard lhs.{{variable.name}} == rhs.{{variable.name}} else { return false }
+{% endfor %}
+
+return true
+}
+}
+{% endfor %}																			//结束循环

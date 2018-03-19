@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AF81E1631F283BF6347BF0D /* Pods_DragonLi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D626CF6C5D1866DC655A3757 /* Pods_DragonLi.framework */; };
 		FF7BDAE0205F55EA0006011F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BDADF205F55EA0006011F /* AppDelegate.swift */; };
 		FF7BDAE2205F55EA0006011F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BDAE1205F55EA0006011F /* ViewController.swift */; };
 		FF7BDAE5205F55EA0006011F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF7BDAE3205F55EA0006011F /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 		FF9EDBDC205F56DD00B8F269 /* DragonLi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EDBDA205F56DD00B8F269 /* DragonLi.swift */; };
 		FFD251FF205F5FA4004BC32F /* UrlPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD251FE205F5FA4004BC32F /* UrlPath.swift */; };
 		FFD25201205F61AD004BC32F /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD25200205F61AD004BC32F /* Option.swift */; };
+		FFD25206205FBEFE004BC32F /* AutoCreateEnum.stencil in Resources */ = {isa = PBXBuildFile; fileRef = FFD25205205FBEFE004BC32F /* AutoCreateEnum.stencil */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E23D99709A22063E8C9F472 /* Pods-DragonLi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonLi.release.xcconfig"; path = "Pods/Target Support Files/Pods-DragonLi/Pods-DragonLi.release.xcconfig"; sourceTree = "<group>"; };
+		6071EBD9725C28863BCC3CA2 /* Pods-DragonLi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonLi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DragonLi/Pods-DragonLi.debug.xcconfig"; sourceTree = "<group>"; };
+		D626CF6C5D1866DC655A3757 /* Pods_DragonLi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragonLi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7BDADC205F55EA0006011F /* DragonLi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonLi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7BDADF205F55EA0006011F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF7BDAE1205F55EA0006011F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +48,7 @@
 		FF9EDBDA205F56DD00B8F269 /* DragonLi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonLi.swift; sourceTree = "<group>"; };
 		FFD251FE205F5FA4004BC32F /* UrlPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlPath.swift; sourceTree = "<group>"; };
 		FFD25200205F61AD004BC32F /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		FFD25205205FBEFE004BC32F /* AutoCreateEnum.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoCreateEnum.stencil; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF81E1631F283BF6347BF0D /* Pods_DragonLi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,13 +70,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FB5A8799D1852FB0876653B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6071EBD9725C28863BCC3CA2 /* Pods-DragonLi.debug.xcconfig */,
+				4E23D99709A22063E8C9F472 /* Pods-DragonLi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6114BB82A360E55A62B8B37C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D626CF6C5D1866DC655A3757 /* Pods_DragonLi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FF7BDAD3205F55EA0006011F = {
 			isa = PBXGroup;
 			children = (
+				FFD25203205FBDE1004BC32F /* templates */,
 				FF9EDBD9205F56A000B8F269 /* Class */,
 				FF7BDADE205F55EA0006011F /* DragonLi */,
 				FF7BDAF3205F55EB0006011F /* DragonLiTests */,
 				FF7BDADD205F55EA0006011F /* Products */,
+				3FB5A8799D1852FB0876653B /* Pods */,
+				6114BB82A360E55A62B8B37C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,11 +134,27 @@
 		FF9EDBD9205F56A000B8F269 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				FFD25204205FBDF5004BC32F /* autoCreate */,
 				FF9EDBDA205F56DD00B8F269 /* DragonLi.swift */,
 				FFD251FE205F5FA4004BC32F /* UrlPath.swift */,
 				FFD25200205F61AD004BC32F /* Option.swift */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		FFD25203205FBDE1004BC32F /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				FFD25205205FBEFE004BC32F /* AutoCreateEnum.stencil */,
+			);
+			path = templates;
+			sourceTree = "<group>";
+		};
+		FFD25204205FBDF5004BC32F /* autoCreate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = autoCreate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,9 +164,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF7BDAF9205F55EB0006011F /* Build configuration list for PBXNativeTarget "DragonLi" */;
 			buildPhases = (
+				F94B9FE217FCC26CAA0AC46D /* [CP] Check Pods Manifest.lock */,
 				FF7BDAD8205F55EA0006011F /* Sources */,
 				FF7BDAD9205F55EA0006011F /* Frameworks */,
 				FF7BDADA205F55EA0006011F /* Resources */,
+				9B86199E4DE93E6EC201B01C /* [CP] Embed Pods Frameworks */,
+				FF3122D164ADD57BE6913CAE /* [CP] Copy Pods Resources */,
+				FFD25202205FBD18004BC32F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -197,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD25206205FBEFE004BC32F /* AutoCreateEnum.stencil in Resources */,
 				FF7BDAEA205F55EA0006011F /* LaunchScreen.storyboard in Resources */,
 				FF7BDAE7205F55EA0006011F /* Assets.xcassets in Resources */,
 				FF7BDAE5205F55EA0006011F /* Main.storyboard in Resources */,
@@ -211,6 +259,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B86199E4DE93E6EC201B01C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DragonLi/Pods-DragonLi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F94B9FE217FCC26CAA0AC46D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DragonLi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF3122D164ADD57BE6913CAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DragonLi/Pods-DragonLi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFD25202205FBD18004BC32F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Pods/Sourcery/bin/sourcery --sources ./ --templates ./templates --output ./Class/autoCreate";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FF7BDAD8205F55EA0006011F /* Sources */ = {
@@ -373,11 +485,13 @@
 		};
 		FF7BDAFA205F55EB0006011F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6071EBD9725C28863BCC3CA2 /* Pods-DragonLi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AP6XM8L72;
 				INFOPLIST_FILE = DragonLi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mikun.DragonLi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -388,11 +502,13 @@
 		};
 		FF7BDAFB205F55EB0006011F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E23D99709A22063E8C9F472 /* Pods-DragonLi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AP6XM8L72;
 				INFOPLIST_FILE = DragonLi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mikun.DragonLi;
 				PRODUCT_NAME = "$(TARGET_NAME)";

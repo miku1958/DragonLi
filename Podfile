@@ -5,11 +5,6 @@ target 'DragonLi' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for DragonLi
-
-  target 'DragonLiTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  pod 'Sourcery'
 
 end
