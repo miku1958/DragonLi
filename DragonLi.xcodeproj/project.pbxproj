@@ -19,6 +19,7 @@
 		FFD251FF205F5FA4004BC32F /* UrlPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD251FE205F5FA4004BC32F /* UrlPath.swift */; };
 		FFD25201205F61AD004BC32F /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD25200205F61AD004BC32F /* Option.swift */; };
 		FFD25206205FBEFE004BC32F /* AutoCreateEnum.stencil in Resources */ = {isa = PBXBuildFile; fileRef = FFD25205205FBEFE004BC32F /* AutoCreateEnum.stencil */; };
+		FFD25208205FC0FF004BC32F /* AutoCreateEnum.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD25207205FC0FF004BC32F /* AutoCreateEnum.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		FFD251FE205F5FA4004BC32F /* UrlPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlPath.swift; sourceTree = "<group>"; };
 		FFD25200205F61AD004BC32F /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		FFD25205205FBEFE004BC32F /* AutoCreateEnum.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoCreateEnum.stencil; sourceTree = "<group>"; };
+		FFD25207205FC0FF004BC32F /* AutoCreateEnum.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCreateEnum.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		FFD25204205FBDF5004BC32F /* autoCreate */ = {
 			isa = PBXGroup;
 			children = (
+				FFD25207205FC0FF004BC32F /* AutoCreateEnum.generated.swift */,
 			);
 			path = autoCreate;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD25208205FC0FF004BC32F /* AutoCreateEnum.generated.swift in Sources */,
 				FFD251FF205F5FA4004BC32F /* UrlPath.swift in Sources */,
 				FF9EDBDB205F56DD00B8F269 /* DragonLi.swift in Sources */,
 				FFD25201205F61AD004BC32F /* Option.swift in Sources */,
