@@ -7,5 +7,5 @@
 //
 
 import UIKit
-protocol UrlPathDelegate{ }
-extension String:UrlPathDelegate{ }
+protocol DragonLiUrlPath{ }
+extension String:DragonLiUrlPath{ }

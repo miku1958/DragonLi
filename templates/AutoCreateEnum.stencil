@@ -1,5 +1,23 @@
-{% for type in types.implementing.AutoCreateEnum %}
-extension {{type.name}} {
+{% for enum in types.implementing.AutoCreateEnum %}
+public func == (lhs: {{enum.name}}, rhs: {{enum.name}}) -> Bool {
+	switch (lhs, rhs) {
+	{% for case in enum.cases %}
+	case (.{{case.name}}, .{{case.name}}): return true
+	{% endfor %}
+	default: return false
+	}
+}
+
+extension Collection where Iterator.Element == {{enum.name}} {
+
+{% for case in enum.cases %}
+
+	func {{case.name}}() -> Bool {
+		return contains { $0 ==  .{{case.name}}}
+	}
+
+{% endfor %}
 
 }
+
 {% endfor %}

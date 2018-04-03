@@ -8,49 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		0AF81E1631F283BF6347BF0D /* Pods_DragonLi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D626CF6C5D1866DC655A3757 /* Pods_DragonLi.framework */; };
-		FF7BDAE0205F55EA0006011F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BDADF205F55EA0006011F /* AppDelegate.swift */; };
-		FF7BDAE2205F55EA0006011F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BDAE1205F55EA0006011F /* ViewController.swift */; };
-		FF7BDAE5205F55EA0006011F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF7BDAE3205F55EA0006011F /* Main.storyboard */; };
-		FF7BDAE7205F55EA0006011F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF7BDAE6205F55EA0006011F /* Assets.xcassets */; };
-		FF7BDAEA205F55EA0006011F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF7BDAE8205F55EA0006011F /* LaunchScreen.storyboard */; };
-		FF7BDAF5205F55EB0006011F /* DragonLiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7BDAF4205F55EB0006011F /* DragonLiTests.swift */; };
-		FF9EDBDB205F56DD00B8F269 /* DragonLi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EDBDA205F56DD00B8F269 /* DragonLi.swift */; };
-		FF9EDBDC205F56DD00B8F269 /* DragonLi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EDBDA205F56DD00B8F269 /* DragonLi.swift */; };
-		FFD251FF205F5FA4004BC32F /* UrlPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD251FE205F5FA4004BC32F /* UrlPath.swift */; };
-		FFD25201205F61AD004BC32F /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD25200205F61AD004BC32F /* Option.swift */; };
+		FF23184B20623F7700366F82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23184320623F7700366F82 /* AppDelegate.swift */; };
+		FF23184C20623F7700366F82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF23184420623F7700366F82 /* Assets.xcassets */; };
+		FF23184D20623F7700366F82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF23184520623F7700366F82 /* LaunchScreen.storyboard */; };
+		FF23184E20623F7700366F82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF23184720623F7700366F82 /* Main.storyboard */; };
+		FF23184F20623F7700366F82 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF23184920623F7700366F82 /* Info.plist */; };
+		FF23185020623F7700366F82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23184A20623F7700366F82 /* ViewController.swift */; };
+		FF3F1BD22060E00D0091F391 /* AutoCreateEnum.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1BCE2060E00C0091F391 /* AutoCreateEnum.generated.swift */; };
+		FF3F1BD42060E00D0091F391 /* DragonLi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1BCF2060E00C0091F391 /* DragonLi.swift */; };
+		FF3F1BD62060E00D0091F391 /* DragonLiOptionsInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1BD02060E00C0091F391 /* DragonLiOptionsInfoItem.swift */; };
+		FF3F1BD82060E00D0091F391 /* UrlPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1BD12060E00C0091F391 /* UrlPath.swift */; };
+		FF60E3E02063360600A1DDDB /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF60E3DF2063360600A1DDDB /* CacheManager.swift */; };
+		FF7CB2CE20689B9B00658EB3 /* ItemUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CB2CD20689B9B00658EB3 /* ItemUnit.swift */; };
+		FF7CB2D12068A18F00658EB3 /* url.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CB2D02068A18F00658EB3 /* url.swift */; };
+		FFAF2B8E2065E0C5000EB79B /* ConnectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF2B8D2065E0C5000EB79B /* ConnectManager.swift */; };
 		FFD25206205FBEFE004BC32F /* AutoCreateEnum.stencil in Resources */ = {isa = PBXBuildFile; fileRef = FFD25205205FBEFE004BC32F /* AutoCreateEnum.stencil */; };
-		FFD25208205FC0FF004BC32F /* AutoCreateEnum.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD25207205FC0FF004BC32F /* AutoCreateEnum.generated.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		FF7BDAF1205F55EB0006011F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF7BDAD4205F55EA0006011F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FF7BDADB205F55EA0006011F;
-			remoteInfo = DragonLi;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4E23D99709A22063E8C9F472 /* Pods-DragonLi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonLi.release.xcconfig"; path = "Pods/Target Support Files/Pods-DragonLi/Pods-DragonLi.release.xcconfig"; sourceTree = "<group>"; };
 		6071EBD9725C28863BCC3CA2 /* Pods-DragonLi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonLi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DragonLi/Pods-DragonLi.debug.xcconfig"; sourceTree = "<group>"; };
 		D626CF6C5D1866DC655A3757 /* Pods_DragonLi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragonLi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF23184320623F7700366F82 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF23184420623F7700366F82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF23184620623F7700366F82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF23184820623F7700366F82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF23184920623F7700366F82 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF23184A20623F7700366F82 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF3F1BCE2060E00C0091F391 /* AutoCreateEnum.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCreateEnum.generated.swift; sourceTree = "<group>"; };
+		FF3F1BCF2060E00C0091F391 /* DragonLi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragonLi.swift; sourceTree = "<group>"; };
+		FF3F1BD02060E00C0091F391 /* DragonLiOptionsInfoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragonLiOptionsInfoItem.swift; sourceTree = "<group>"; };
+		FF3F1BD12060E00C0091F391 /* UrlPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlPath.swift; sourceTree = "<group>"; };
+		FF60E3DF2063360600A1DDDB /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CacheManager.swift; path = Class/CacheManager.swift; sourceTree = SOURCE_ROOT; };
 		FF7BDADC205F55EA0006011F /* DragonLi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonLi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF7BDADF205F55EA0006011F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF7BDAE1205F55EA0006011F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FF7BDAE4205F55EA0006011F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FF7BDAE6205F55EA0006011F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FF7BDAE9205F55EA0006011F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FF7BDAEB205F55EA0006011F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF7BDAF0205F55EB0006011F /* DragonLiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonLiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF7BDAF4205F55EB0006011F /* DragonLiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonLiTests.swift; sourceTree = "<group>"; };
-		FF7BDAF6205F55EB0006011F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF9EDBDA205F56DD00B8F269 /* DragonLi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonLi.swift; sourceTree = "<group>"; };
-		FFD251FE205F5FA4004BC32F /* UrlPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlPath.swift; sourceTree = "<group>"; };
-		FFD25200205F61AD004BC32F /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		FF7CB2CD20689B9B00658EB3 /* ItemUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemUnit.swift; sourceTree = "<group>"; };
+		FF7CB2D02068A18F00658EB3 /* url.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = url.swift; sourceTree = "<group>"; };
+		FFAF2B8D2065E0C5000EB79B /* ConnectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectManager.swift; sourceTree = "<group>"; };
 		FFD25205205FBEFE004BC32F /* AutoCreateEnum.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = AutoCreateEnum.stencil; sourceTree = "<group>"; };
-		FFD25207205FC0FF004BC32F /* AutoCreateEnum.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCreateEnum.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +53,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AF81E1631F283BF6347BF0D /* Pods_DragonLi.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF7BDAED205F55EB0006011F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,16 +76,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FF23184220623F7700366F82 /* DragonLi */ = {
+			isa = PBXGroup;
+			children = (
+				FF23184320623F7700366F82 /* AppDelegate.swift */,
+				FF23184420623F7700366F82 /* Assets.xcassets */,
+				FF23184520623F7700366F82 /* LaunchScreen.storyboard */,
+				FF23184720623F7700366F82 /* Main.storyboard */,
+				FF23184920623F7700366F82 /* Info.plist */,
+				FF23184A20623F7700366F82 /* ViewController.swift */,
+				FF7CB2D02068A18F00658EB3 /* url.swift */,
+			);
+			path = DragonLi;
+			sourceTree = "<group>";
+		};
+		FF3F1BCC2060E00C0091F391 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				FF3F1BCD2060E00C0091F391 /* autoCreate */,
+				FF3F1BCF2060E00C0091F391 /* DragonLi.swift */,
+				FF3F1BD02060E00C0091F391 /* DragonLiOptionsInfoItem.swift */,
+				FF3F1BD12060E00C0091F391 /* UrlPath.swift */,
+				FFAF2B8D2065E0C5000EB79B /* ConnectManager.swift */,
+				FF60E3DF2063360600A1DDDB /* CacheManager.swift */,
+				FF7CB2CD20689B9B00658EB3 /* ItemUnit.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		FF3F1BCD2060E00C0091F391 /* autoCreate */ = {
+			isa = PBXGroup;
+			children = (
+				FF3F1BCE2060E00C0091F391 /* AutoCreateEnum.generated.swift */,
+			);
+			path = autoCreate;
+			sourceTree = "<group>";
+		};
 		FF7BDAD3205F55EA0006011F = {
 			isa = PBXGroup;
 			children = (
+				FF3F1BCC2060E00C0091F391 /* Class */,
 				FFD25203205FBDE1004BC32F /* templates */,
-				FF9EDBD9205F56A000B8F269 /* Class */,
-				FF7BDADE205F55EA0006011F /* DragonLi */,
-				FF7BDAF3205F55EB0006011F /* DragonLiTests */,
+				FF23184220623F7700366F82 /* DragonLi */,
 				FF7BDADD205F55EA0006011F /* Products */,
-				3FB5A8799D1852FB0876653B /* Pods */,
 				6114BB82A360E55A62B8B37C /* Frameworks */,
+				3FB5A8799D1852FB0876653B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,42 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				FF7BDADC205F55EA0006011F /* DragonLi.app */,
-				FF7BDAF0205F55EB0006011F /* DragonLiTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FF7BDADE205F55EA0006011F /* DragonLi */ = {
-			isa = PBXGroup;
-			children = (
-				FF7BDADF205F55EA0006011F /* AppDelegate.swift */,
-				FF7BDAE1205F55EA0006011F /* ViewController.swift */,
-				FF7BDAE3205F55EA0006011F /* Main.storyboard */,
-				FF7BDAE6205F55EA0006011F /* Assets.xcassets */,
-				FF7BDAE8205F55EA0006011F /* LaunchScreen.storyboard */,
-				FF7BDAEB205F55EA0006011F /* Info.plist */,
-			);
-			path = DragonLi;
-			sourceTree = "<group>";
-		};
-		FF7BDAF3205F55EB0006011F /* DragonLiTests */ = {
-			isa = PBXGroup;
-			children = (
-				FF7BDAF4205F55EB0006011F /* DragonLiTests.swift */,
-				FF7BDAF6205F55EB0006011F /* Info.plist */,
-			);
-			path = DragonLiTests;
-			sourceTree = "<group>";
-		};
-		FF9EDBD9205F56A000B8F269 /* Class */ = {
-			isa = PBXGroup;
-			children = (
-				FFD25204205FBDF5004BC32F /* autoCreate */,
-				FF9EDBDA205F56DD00B8F269 /* DragonLi.swift */,
-				FFD251FE205F5FA4004BC32F /* UrlPath.swift */,
-				FFD25200205F61AD004BC32F /* Option.swift */,
-			);
-			path = Class;
 			sourceTree = "<group>";
 		};
 		FFD25203205FBDE1004BC32F /* templates */ = {
@@ -150,14 +138,6 @@
 				FFD25205205FBEFE004BC32F /* AutoCreateEnum.stencil */,
 			);
 			path = templates;
-			sourceTree = "<group>";
-		};
-		FFD25204205FBDF5004BC32F /* autoCreate */ = {
-			isa = PBXGroup;
-			children = (
-				FFD25207205FC0FF004BC32F /* AutoCreateEnum.generated.swift */,
-			);
-			path = autoCreate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,24 +164,6 @@
 			productReference = FF7BDADC205F55EA0006011F /* DragonLi.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FF7BDAEF205F55EB0006011F /* DragonLiTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FF7BDAFC205F55EB0006011F /* Build configuration list for PBXNativeTarget "DragonLiTests" */;
-			buildPhases = (
-				FF7BDAEC205F55EB0006011F /* Sources */,
-				FF7BDAED205F55EB0006011F /* Frameworks */,
-				FF7BDAEE205F55EB0006011F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FF7BDAF2205F55EB0006011F /* PBXTargetDependency */,
-			);
-			name = DragonLiTests;
-			productName = DragonLiTests;
-			productReference = FF7BDAF0205F55EB0006011F /* DragonLiTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -215,11 +177,6 @@
 					FF7BDADB205F55EA0006011F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-					};
-					FF7BDAEF205F55EB0006011F = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = FF7BDADB205F55EA0006011F;
 					};
 				};
 			};
@@ -237,7 +194,6 @@
 			projectRoot = "";
 			targets = (
 				FF7BDADB205F55EA0006011F /* DragonLi */,
-				FF7BDAEF205F55EB0006011F /* DragonLiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -247,17 +203,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF23184D20623F7700366F82 /* LaunchScreen.storyboard in Resources */,
+				FF23184C20623F7700366F82 /* Assets.xcassets in Resources */,
 				FFD25206205FBEFE004BC32F /* AutoCreateEnum.stencil in Resources */,
-				FF7BDAEA205F55EA0006011F /* LaunchScreen.storyboard in Resources */,
-				FF7BDAE7205F55EA0006011F /* Assets.xcassets in Resources */,
-				FF7BDAE5205F55EA0006011F /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF7BDAEE205F55EB0006011F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				FF23184F20623F7700366F82 /* Info.plist in Resources */,
+				FF23184E20623F7700366F82 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +273,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Pods/Sourcery/bin/sourcery --sources ./ --templates ./templates --output ./Class/autoCreate";
+			shellScript = "./Pods/Sourcery/bin/sourcery --sources ./ --templates ./templates --output ./Class/autoCreate \n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -332,49 +282,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFD25208205FC0FF004BC32F /* AutoCreateEnum.generated.swift in Sources */,
-				FFD251FF205F5FA4004BC32F /* UrlPath.swift in Sources */,
-				FF9EDBDB205F56DD00B8F269 /* DragonLi.swift in Sources */,
-				FFD25201205F61AD004BC32F /* Option.swift in Sources */,
-				FF7BDAE2205F55EA0006011F /* ViewController.swift in Sources */,
-				FF7BDAE0205F55EA0006011F /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF7BDAEC205F55EB0006011F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FF7BDAF5205F55EB0006011F /* DragonLiTests.swift in Sources */,
-				FF9EDBDC205F56DD00B8F269 /* DragonLi.swift in Sources */,
+				FF23185020623F7700366F82 /* ViewController.swift in Sources */,
+				FF3F1BD22060E00D0091F391 /* AutoCreateEnum.generated.swift in Sources */,
+				FF3F1BD42060E00D0091F391 /* DragonLi.swift in Sources */,
+				FF3F1BD62060E00D0091F391 /* DragonLiOptionsInfoItem.swift in Sources */,
+				FF23184B20623F7700366F82 /* AppDelegate.swift in Sources */,
+				FF60E3E02063360600A1DDDB /* CacheManager.swift in Sources */,
+				FFAF2B8E2065E0C5000EB79B /* ConnectManager.swift in Sources */,
+				FF7CB2D12068A18F00658EB3 /* url.swift in Sources */,
+				FF3F1BD82060E00D0091F391 /* UrlPath.swift in Sources */,
+				FF7CB2CE20689B9B00658EB3 /* ItemUnit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		FF7BDAF2205F55EB0006011F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FF7BDADB205F55EA0006011F /* DragonLi */;
-			targetProxy = FF7BDAF1205F55EB0006011F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		FF7BDAE3205F55EA0006011F /* Main.storyboard */ = {
+		FF23184520623F7700366F82 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FF7BDAE4205F55EA0006011F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FF7BDAE8205F55EA0006011F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FF7BDAE9205F55EA0006011F /* Base */,
+				FF23184620623F7700366F82 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FF23184720623F7700366F82 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF23184820623F7700366F82 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -434,6 +371,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -483,6 +421,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -499,7 +438,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mikun.DragonLi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -516,42 +455,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mikun.DragonLi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		FF7BDAFD205F55EB0006011F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3AP6XM8L72;
-				INFOPLIST_FILE = DragonLiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mikun.DragonLiTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragonLi.app/DragonLi";
-			};
-			name = Debug;
-		};
-		FF7BDAFE205F55EB0006011F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3AP6XM8L72;
-				INFOPLIST_FILE = DragonLiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mikun.DragonLiTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragonLi.app/DragonLi";
 			};
 			name = Release;
 		};
@@ -572,15 +477,6 @@
 			buildConfigurations = (
 				FF7BDAFA205F55EB0006011F /* Debug */,
 				FF7BDAFB205F55EB0006011F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FF7BDAFC205F55EB0006011F /* Build configuration list for PBXNativeTarget "DragonLiTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FF7BDAFD205F55EB0006011F /* Debug */,
-				FF7BDAFE205F55EB0006011F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
