@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
                    DESC
-a high efficient network tool with cache/network debug for iOS , and it is apply to lazy people like myself 
+a high efficient network tool with cache and network debug for iOS , and it is apply to lazy people like myself 
   s.homepage     = "https://github.com/miku1958/DragonLi"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
