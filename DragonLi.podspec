@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
                    DESC
- a high efficient network tool with cache/network debug for iOS , and it is apply to lazy people like myself 
+a high efficient network tool with cache/network debug for iOS , and it is apply to lazy people like myself 
   s.homepage     = "https://github.com/miku1958/DragonLi"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Class/**/*.{h,m}"
+  s.source_files  = "Class/**/*.{h,swift}"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -128,7 +128,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
