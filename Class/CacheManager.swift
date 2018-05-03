@@ -17,6 +17,6 @@ final class CacheManager {
 
 	static func get(cacheName:String) -> AnyObject? {
 
-		return "" as AnyObject
+		return nil
 	}
 }

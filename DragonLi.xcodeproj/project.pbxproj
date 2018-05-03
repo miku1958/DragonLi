@@ -19,6 +19,7 @@
 		FF3F1BD62060E00D0091F391 /* DragonLiOptionsInfoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1BD02060E00C0091F391 /* DragonLiOptionsInfoItem.swift */; };
 		FF3F1BD82060E00D0091F391 /* UrlPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1BD12060E00C0091F391 /* UrlPath.swift */; };
 		FF60E3E02063360600A1DDDB /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF60E3DF2063360600A1DDDB /* CacheManager.swift */; };
+		FF77D858209B0B7C008EFBC0 /* DragonLiOCInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF77D857209B0B7C008EFBC0 /* DragonLiOCInterface.swift */; };
 		FF7CB2CE20689B9B00658EB3 /* ItemUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CB2CD20689B9B00658EB3 /* ItemUnit.swift */; };
 		FF7CB2D12068A18F00658EB3 /* url.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CB2D02068A18F00658EB3 /* url.swift */; };
 		FFAF2B8E2065E0C5000EB79B /* ConnectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF2B8D2065E0C5000EB79B /* ConnectManager.swift */; };
@@ -40,6 +41,8 @@
 		FF3F1BD02060E00C0091F391 /* DragonLiOptionsInfoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragonLiOptionsInfoItem.swift; sourceTree = "<group>"; };
 		FF3F1BD12060E00C0091F391 /* UrlPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlPath.swift; sourceTree = "<group>"; };
 		FF60E3DF2063360600A1DDDB /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CacheManager.swift; path = Class/CacheManager.swift; sourceTree = SOURCE_ROOT; };
+		FF77D856209B0B7C008EFBC0 /* DragonLi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragonLi.h; sourceTree = "<group>"; };
+		FF77D857209B0B7C008EFBC0 /* DragonLiOCInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragonLiOCInterface.swift; sourceTree = "<group>"; };
 		FF7BDADC205F55EA0006011F /* DragonLi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonLi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7CB2CD20689B9B00658EB3 /* ItemUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemUnit.swift; sourceTree = "<group>"; };
 		FF7CB2D02068A18F00658EB3 /* url.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = url.swift; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 		FF3F1BCC2060E00C0091F391 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				FF77D855209B0B7C008EFBC0 /* OCInterface */,
 				FF3F1BCD2060E00C0091F391 /* autoCreate */,
 				FF3F1BCF2060E00C0091F391 /* DragonLi.swift */,
 				FF3F1BD02060E00C0091F391 /* DragonLiOptionsInfoItem.swift */,
@@ -110,6 +114,15 @@
 				FF3F1BCE2060E00C0091F391 /* AutoCreateEnum.generated.swift */,
 			);
 			path = autoCreate;
+			sourceTree = "<group>";
+		};
+		FF77D855209B0B7C008EFBC0 /* OCInterface */ = {
+			isa = PBXGroup;
+			children = (
+				FF77D856209B0B7C008EFBC0 /* DragonLi.h */,
+				FF77D857209B0B7C008EFBC0 /* DragonLiOCInterface.swift */,
+			);
+			path = OCInterface;
 			sourceTree = "<group>";
 		};
 		FF7BDAD3205F55EA0006011F = {
@@ -289,6 +302,7 @@
 				FF23184B20623F7700366F82 /* AppDelegate.swift in Sources */,
 				FF60E3E02063360600A1DDDB /* CacheManager.swift in Sources */,
 				FFAF2B8E2065E0C5000EB79B /* ConnectManager.swift in Sources */,
+				FF77D858209B0B7C008EFBC0 /* DragonLiOCInterface.swift in Sources */,
 				FF7CB2D12068A18F00658EB3 /* url.swift in Sources */,
 				FF3F1BD82060E00D0091F391 /* UrlPath.swift in Sources */,
 				FF7CB2CE20689B9B00658EB3 /* ItemUnit.swift in Sources */,
@@ -438,6 +452,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mikun.DragonLi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Class/OCInterface/DragonLi.h;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,6 +470,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mikun.DragonLi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Class/OCInterface/DragonLi.h;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

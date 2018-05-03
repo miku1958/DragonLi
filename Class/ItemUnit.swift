@@ -58,13 +58,13 @@ public struct URLUnit{
 
 }
 
-public struct uploadItemUnit {
+public class uploadItemUnit:NSObject {
 	let data:Data;
 	let paraName:String;
 	let fileName:String;
 	let mimeType:String;
 
-	public init(data:Data,paraName:String?,fileName:String?,mimeType:String?) {
+	@objc public init(data:Data,paraName:String?,fileName:String?,mimeType:String?) {
 
 		self.data = data
 		self.paraName = paraName ?? ""

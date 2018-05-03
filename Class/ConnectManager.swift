@@ -36,11 +36,26 @@ public class ConnectManager {
 
 
 	func  createDataTask(urlUnit:URLUnit,request:URLRequest,option:DragonLiOptionsInfo, finish:ConnectFinish? = nil) -> () {
- 
-		let task = URLSession.shared.dataTask(with: request) {
-			(data, urlResponse, error) in
-			self.convertResult(data, urlResponse, error, option, finish)
+		var task:URLSessionTask!
+		var config:URLSessionConfiguration!
+
+		if option.taskiInSecret() {
+			config = URLSessionConfiguration.ephemeral
+		}else if option.taskInBackground(){
+			config  = URLSessionConfiguration.background(withIdentifier: request.url?.host ?? "")
 		}
+		if config != nil{
+			task = URLSession.shared.dataTask(with: request) {
+				(data, urlResponse, error) in
+				self.convertResult(data, urlResponse, error, option, finish)
+			}
+		}else{
+			task = URLSession.shared.dataTask(with: request) {
+				(data, urlResponse, error) in
+				self.convertResult(data, urlResponse, error, option, finish)
+			}
+		}
+
 		update(url: urlUnit.fullUrl, task: task)
 		task.resume()
 	}
@@ -72,16 +87,24 @@ public class ConnectManager {
 		if option.convertJsonObject(){
 			do{
 				let json = try JSONSerialization.jsonObject(with: data ?? Data(), options: [])
-				if options.debugPrintUrl() { print(json) }
-				finish?(.success(json,false))
+				if option.debugPrintUrl() { print(json) }
+				DispatchQueue.main.async {
+					finish?(.success(json,false))
+				}
 			}catch{
-				finish?(.failure(error))
+				DispatchQueue.main.async {
+					finish?(.success(data,false))
+				}
 			}
 		}else{
 			if error != nil{
-				finish?(.failure(error!))
+				DispatchQueue.main.async {
+					finish?(.failure(error!))
+				}
 			}else{
-				finish?(.success(data,false))
+				DispatchQueue.main.async {
+					finish?(.success(data,false))
+				}
 			}
 		}
 	}

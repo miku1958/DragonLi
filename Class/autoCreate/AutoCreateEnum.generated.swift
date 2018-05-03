@@ -10,8 +10,9 @@ public func == (lhs: DragonLiOptionsInfoItem, rhs: DragonLiOptionsInfoItem) -> B
 	case (.debugPrintUrl, .debugPrintUrl): return true
 	case (.debugPrintResponseData, .debugPrintResponseData): return true
 	case (.enableCache, .enableCache): return true
-	case (.independentTask, .independentTask): return true
 	case (.cacheOnly, .cacheOnly): return true
+	case (.taskiInSecret, .taskiInSecret): return true
+	case (.taskInBackground, .taskInBackground): return true
 	case (.filterMultipleRequests, .filterMultipleRequests): return true
 	default: return false
 	}
@@ -50,13 +51,18 @@ extension Collection where Iterator.Element == DragonLiOptionsInfoItem {
 	}
 
 
-	func independentTask() -> Bool {
-		return contains { $0 ==  .independentTask}
+	func cacheOnly() -> Bool {
+		return contains { $0 ==  .cacheOnly}
 	}
 
 
-	func cacheOnly() -> Bool {
-		return contains { $0 ==  .cacheOnly}
+	func taskiInSecret() -> Bool {
+		return contains { $0 ==  .taskiInSecret}
+	}
+
+
+	func taskInBackground() -> Bool {
+		return contains { $0 ==  .taskInBackground}
 	}
 
 

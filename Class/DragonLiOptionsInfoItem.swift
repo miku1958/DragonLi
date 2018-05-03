@@ -17,19 +17,26 @@ let DragonLiEmptyOptionsInfo = DragonLiOptionsInfo()
 
 public protocol AutoCreateEnum{ }
 
+
 public enum DragonLiOptionsInfoItem:AutoCreateEnum{
 
-	case methodIsGET
-	case methodIsPOST
+	case methodIsGET//check
+	case methodIsPOST//check
 
-	case convertJsonObject
+	case convertJsonObject//check
 
-	case debugPrintUrl
-	case debugPrintResponseData
+	case debugPrintUrl//check
+	case debugPrintResponseData//check
+
 	case enableCache
-	case independentTask
 	case cacheOnly
-	case filterMultipleRequests
+
+///use an independent URLSession instand of URLSession.shared
+	case taskiInSecret//check
+	case taskInBackground//check
+
+///only allow one task for same requestURL
+	case filterMultipleRequests//check
 }
 
 

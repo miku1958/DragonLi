@@ -11,27 +11,59 @@ import UIKit
 
 public typealias ConnectFinish =  ((_ result:DragonLiResult) -> Void)
 
-public class DragonLi{
-	private var defaultHost:String?
+class DragonLi{
+	fileprivate var defaultHost:String = ""
+
+	fileprivate lazy var httpRequestListCache:[String:TimeInterval] = [:]
 
 	public var defaultOptions = DragonLiEmptyOptionsInfo
 	public static let shared:DragonLi = DragonLi()
 
 	let connectMgr = ConnectManager()
 
-	static func setDefault(host:String? = nil, option:DragonLiOptionsInfo? = nil){
+	public static func setDefault(host:String? = nil, option:DragonLiOptionsInfo? = nil){
+		if let host = host{
+			shared.defaultHost = host
+		}
 		if let option = option{
 			shared.defaultOptions += option
 		}
 
 	}
+	public static func cancel(_ url:String){
+		if let tasks = shared.connectMgr.taskDic[url] {
+			for task in tasks{
+				task.cancel()
+			}
+			shared.connectMgr.taskDic.removeValue(forKey: url)
+		}
+	}
+	public static func cancelAll(){
+		for tasks in shared.connectMgr.taskDic.values {
+			for task in tasks{
+				task.cancel()
+			}
+		}
+		shared.connectMgr.taskDic.removeAll()
+	}
 
-	static func add(_ url:DragonLiUrlPath, para:Dictionary<String, Any>? = nil,uploadUnits:[uploadItemUnit] = [], option:DragonLiOptionsInfo? = nil, finish:ConnectFinish? = nil) -> Void {
+}
+
+extension DragonLi{
+	public static func add(_ url:DragonLiUrlPath, para:Dictionary<String, Any>? = nil,uploadUnits:[uploadItemUnit] = [], option:DragonLiOptionsInfo? = nil, finish:ConnectFinish? = nil) -> Void {
 
 		let options = self.shared.defaultOptions + (option ?? DragonLiEmptyOptionsInfo)
-
-
-		let url = (self.shared.defaultHost ?? "")  + (url as! String);
+		var url = url as! String
+		if self.shared.defaultHost.last == "/" && url.first == "/" {
+			url.removeFirst()
+		}
+		if self.shared.defaultHost.count>0 && self.shared.defaultHost.last != "/" && url.first != "/" {
+			url = "/\(url)"
+		}
+		if url.last == "?" {
+			url.removeLast()
+		}
+		url = self.shared.defaultHost  + url
 
 
 		let urlUnit = URLUnit(host: url, para: (para ?? Dictionary()))
@@ -50,26 +82,32 @@ public class DragonLi{
 		}
 		if options.filterMultipleRequests() {
 			let requestTime = Date().timeIntervalSince1970;
-//			httpRequestListCache[cacheKey] = @(requestTime);
+			if let lastTime = shared.httpRequestListCache[cacheKey] {
+				//				if lastTime - requestTime <{
+				//
+				//				}
+				return;
+			}
+			shared.httpRequestListCache[cacheKey] = requestTime;
 		}
 
+		let handleFinish:ConnectFinish = { (result) in
+			if options.filterMultipleRequests() {
+				shared.httpRequestListCache.removeValue(forKey: cacheKey);
+			}
+			finish?(result)
+		}
 		for method in options.reversed(){
 			switch method {
 			case .methodIsGET:
-				shared.connectMgr.createGetTask(urlUnit:urlUnit,option:options, finish: finish)
+				shared.connectMgr.createGetTask(urlUnit:urlUnit,option:options, finish: handleFinish)
 				return;
 			case .methodIsPOST:
-				shared.connectMgr.createPostTask(urlUnit:urlUnit,uploadFiles: uploadUnits,option:options, finish: finish)
+				shared.connectMgr.createPostTask(urlUnit:urlUnit,uploadFiles: uploadUnits,option:options, finish: handleFinish)
 				return;
 			default:break;
 			}
 		}
 
 	}
-
-
-}
-
-extension DragonLi{
-
 }

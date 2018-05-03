@@ -7,5 +7,5 @@
 //
 
 import UIKit
-protocol DragonLiUrlPath{ }
+public protocol DragonLiUrlPath{ }
 extension String:DragonLiUrlPath{ }
