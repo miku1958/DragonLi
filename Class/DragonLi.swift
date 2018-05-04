@@ -11,7 +11,7 @@ import UIKit
 
 public typealias ConnectFinish =  ((_ result:DragonLiResult) -> Void)
 
-class DragonLi{
+open class DragonLi{
 	fileprivate var defaultHost:String = ""
 
 	fileprivate lazy var httpRequestListCache:[String:TimeInterval] = [:]

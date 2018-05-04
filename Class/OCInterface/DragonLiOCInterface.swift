@@ -9,7 +9,7 @@
 import UIKit
 
 
-class DragonLiOC: NSObject {
+open  class DragonLiOC: NSObject {
 	static func convertOption(_ optionInfo:DragonLiOptionsInfoOCItem) -> (DragonLiOptionsInfo){
 		let option =  optionInfo.rawValue
 		var options:DragonLiOptionsInfo = []

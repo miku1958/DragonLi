@@ -58,7 +58,7 @@ public struct URLUnit{
 
 }
 
-public class uploadItemUnit:NSObject {
+open class uploadItemUnit:NSObject {
 	let data:Data;
 	let paraName:String;
 	let fileName:String;
