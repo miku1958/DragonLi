@@ -14,6 +14,7 @@ public func == (lhs: DragonLiOptionsInfoItem, rhs: DragonLiOptionsInfoItem) -> B
 	case (.taskiInSecret, .taskiInSecret): return true
 	case (.taskInBackground, .taskInBackground): return true
 	case (.filterMultipleRequests, .filterMultipleRequests): return true
+	case (.autoCancelSameRequests, .autoCancelSameRequests): return true
 	default: return false
 	}
 }
@@ -68,6 +69,11 @@ extension Collection where Iterator.Element == DragonLiOptionsInfoItem {
 
 	func filterMultipleRequests() -> Bool {
 		return contains { $0 ==  .filterMultipleRequests}
+	}
+
+
+	func autoCancelSameRequests() -> Bool {
+		return contains { $0 ==  .autoCancelSameRequests}
 	}
 
 

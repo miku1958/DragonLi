@@ -37,6 +37,8 @@ public enum DragonLiOptionsInfoItem:AutoCreateEnum{
 
 ///only allow one task for same requestURL
 	case filterMultipleRequests//check
+///if allow, when finish a request,the other same url request will be cancel
+	case autoCancelSameRequests//check
 }
 
 

@@ -38,7 +38,7 @@ public class ConnectManager {
 	func  createDataTask(urlUnit:URLUnit,request:URLRequest,option:DragonLiOptionsInfo, finish:ConnectFinish? = nil) -> () {
 		var task:URLSessionTask!
 		var config:URLSessionConfiguration!
-
+		let url = urlUnit.fullUrl
 		if option.taskiInSecret() {
 			config = URLSessionConfiguration.ephemeral
 		}else if option.taskInBackground(){
@@ -47,22 +47,22 @@ public class ConnectManager {
 		if config != nil{
 			task = URLSession.shared.dataTask(with: request) {
 				(data, urlResponse, error) in
-				self.convertResult(data, urlResponse, error, option, finish)
+				self.convertResult(data, url, error, option, finish)
 			}
 		}else{
 			task = URLSession.shared.dataTask(with: request) {
 				(data, urlResponse, error) in
-				self.convertResult(data, urlResponse, error, option, finish)
+				self.convertResult(data, url, error, option, finish)
 			}
 		}
 
-		update(url: urlUnit.fullUrl, task: task)
+		update(url:url , task: task)
 		task.resume()
 	}
 	func  createUploadFilleTask(urlUnit:URLUnit, request:URLRequest,option:DragonLiOptionsInfo, uploadFiles:[uploadItemUnit], finish:ConnectFinish? = nil) -> () {
 
-
 		var request = request
+		let url = urlUnit.fullUrl
 
 		let BOUNDRY = "Boundary+\(arc4random())\(arc4random())"
 
@@ -76,14 +76,25 @@ public class ConnectManager {
 
 		let task = URLSession.shared.uploadTask(with: request, from: data){
 			(data, urlResponse, error) in
-			self.convertResult(data, urlResponse, error, option, finish)
+			self.convertResult(data, url, error, option, finish)
 		}
-		update(url: urlUnit.fullUrl, task: task)
+		update(url:url , task: task)
 		task.resume()
 
 	}
 
-	func convertResult(_ data:Data?, _ urlResponse:URLResponse?, _ error:Error?, _ option:DragonLiOptionsInfo, _ finish:ConnectFinish?) {
+	func convertResult(_ data:Data?, _ fullURL:String?, _ error:Error?, _ option:DragonLiOptionsInfo, _ finish:ConnectFinish?) {
+		if option.autoCancelSameRequests(){
+			if  let fullURL = fullURL,let tasks = taskDic[fullURL] {
+				DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(0)) {
+					for task in tasks {
+						task.cancel()//某些上传的业务来到这里可能会停了
+					}
+					self.taskDic.removeValue(forKey: fullURL)
+				}
+			}
+		}
+
 		if option.convertJsonObject(){
 			do{
 				let json = try JSONSerialization.jsonObject(with: data ?? Data(), options: [])
@@ -154,11 +165,13 @@ public class ConnectManager {
 	}
 
 	func update(url:String,task:URLSessionTask) {
-		var taskList = taskDic[url]
-		if taskList == nil {
-			taskDic[url] = [task]
-		}else{
-			taskList!.append(task)
+		if option.autoCancelSameRequests(){
+			DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(0)) {
+				if  self.taskDic[url] == nil {
+					self.taskDic[url] = []
+				}
+				self.taskDic[url]!.append(task)
+			}
 		}
 	}
 }
