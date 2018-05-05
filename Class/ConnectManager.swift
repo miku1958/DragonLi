@@ -55,8 +55,9 @@ public class ConnectManager {
 				self.convertResult(data, url, error, option, finish)
 			}
 		}
-
-		update(url:url , task: task)
+		if option.autoCancelSameRequests(){
+			update(url:url , task: task)
+		}
 		task.resume()
 	}
 	func  createUploadFilleTask(urlUnit:URLUnit, request:URLRequest,option:DragonLiOptionsInfo, uploadFiles:[uploadItemUnit], finish:ConnectFinish? = nil) -> () {
@@ -78,7 +79,9 @@ public class ConnectManager {
 			(data, urlResponse, error) in
 			self.convertResult(data, url, error, option, finish)
 		}
-		update(url:url , task: task)
+		if option.autoCancelSameRequests(){
+			update(url:url , task: task)
+		}
 		task.resume()
 
 	}
@@ -165,13 +168,13 @@ public class ConnectManager {
 	}
 
 	func update(url:String,task:URLSessionTask) {
-		if option.autoCancelSameRequests(){
-			DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(0)) {
-				if  self.taskDic[url] == nil {
-					self.taskDic[url] = []
-				}
-				self.taskDic[url]!.append(task)
+
+		DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(0)) {
+			if  self.taskDic[url] == nil {
+				self.taskDic[url] = []
 			}
+			self.taskDic[url]!.append(task)
 		}
+
 	}
 }
