@@ -46,10 +46,16 @@ public struct URLUnit{
 		}
 
 		var basehost = url
-
 		if let range = basehost.range(of: "?\(query)") {
 			basehost.replaceSubrange(range, with: "")
 		}
+		if
+			let queryPercent = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+			let range = basehost.range(of: "?\(queryPercent)"){
+			
+			basehost.replaceSubrange(range, with: "")
+		}
+
 
 		host = basehost
 		fullUrl = url
